@@ -14,7 +14,11 @@ MongoDB
 Mongoose
 
 ## Live Demo
+https://fitness-trackercnc.herokuapp.com/
 
 ## Author
+Christopher Cochran
 
 ## Screenshots
+<img src="./img/1.png">
+<img src="./img/2.png">
