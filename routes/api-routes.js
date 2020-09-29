@@ -5,10 +5,10 @@ module.exports = (app) => {
     //get all
     app.get("/api/workouts", (req, res) => {
         db.Workout.find({}, (err, workouts) => {
-            if(err){
+            if (err) {
                 console.log(err);
             } else {
-                res.json(workouts)
+                res.json(workouts);
             }
         });
     });
@@ -16,9 +16,9 @@ module.exports = (app) => {
     //add excerise, set id, push to model, set true
     app.put("/api/workouts/:workout", ({ params, body }, res) => {
         db.Workout.findOneAndUpdate(
-            { _id: params.id},
-            {$push: {excercises:body }},
-            { upsert: true, useFindandModify:false},
+            { _id: params.id },
+            { $push: {excercises:body }},
+            { upsert: true, useFindandModify:false },
             updatedWorkout => {
                 res.json(updatedWorkout);
             })
@@ -31,15 +31,12 @@ module.exports = (app) => {
         });
     });
 
-    // get workout range
+    // get workout rangeW
     app.get("/api/workouts/range", (req, res) => {
-
         db.Workout.find({}).then(dbWorkout => {
             res.json(dbWorkout);
         }).catch(err => {
             res.json(err);
         });
-
     });
-
 }
