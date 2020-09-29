@@ -24,14 +24,14 @@ module.exports = (app) => {
             })
     });
 
-    //create new workout
+    //create workout
     app.post('/api/workouts', (req,res) => {
         db.Workout.create({}).then(newWorkout => {
             res.json(newWorkout);
         });
     });
 
-    // get workouts in range
+    // get workout range
     app.get("/api/workouts/range", (req, res) => {
 
         db.Workout.find({}).then(dbWorkout => {
