@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
-
+//Mongo Keys
 const ExerciseSchema = new Schema({
     type: String,
     name: String,
