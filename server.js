@@ -27,8 +27,6 @@ mongoose.connect(
     }
 );
 
-//require('./seeders/seed')
-
 //use routes
 require('./routes/api-routes')(app)
 require('./routes/html-routes')(app)
